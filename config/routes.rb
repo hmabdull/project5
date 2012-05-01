@@ -1,7 +1,11 @@
 Project5::Application.routes.draw do
  
-get "pages/home"
-get "pages/contact"
+match '/signup', :to => 'users#new'
+match '/contact', :to => 'pages#contact'
+match '/about', :to => 'pages#about'
+match '/help', :to => 'pages#help'
+match '/', :to => 'pages#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,7 +57,7 @@ get "pages/contact"
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-
+root :to =>'pages#home'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

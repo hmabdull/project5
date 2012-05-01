@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Party Maneger| <%= @title %> </title>
+  <title> <%= @title %> </title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <link rel="stylesheet" type="text/css" href="custom.css" />
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div class ="container">
 
+	<%= render 'layouts/header'%>
+	<section class ="round">
 <%= yield %>
+
+</section>
+	<%= render 'layouts/footer'%>
+</div>
 
 </body>
 </html>
