@@ -7,13 +7,14 @@ describe PagesController do
     it "should be successful" do
       get 'home'
       response.should be_success
-    end
+        end
   
 
   it " should have the right title" do 
     get 'home'
     response.should have_selector("title", :content => "Party Maneger |home")
-  end 
+        end 
+        
 end
 
   describe "GET 'contact'" do
