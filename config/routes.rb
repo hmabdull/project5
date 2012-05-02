@@ -6,7 +6,6 @@ match '/about', :to => 'pages#about'
 match '/help', :to => 'pages#help'
 match '/', :to => 'pages#home'
 
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
